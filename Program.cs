@@ -1,4 +1,5 @@
-﻿//1 Задача
+﻿//**************************************1 Задача
+
 /*int[] arr = new int [10];
 Random rdm = new Random();
 
@@ -18,10 +19,9 @@ foreach (int item in arr)
 
 };
 
-Console.WriteLine($"В массиве {count} элементов лежат в диапозоне от 20 до 90");*/
+Console.WriteLine($"В массиве {count} элементов лежат в диапозоне от 20 до 90");
 
-//Задача 2
-
+//*************************************Задача 2
 int[] arr = new int [10];
 Random rdm = new Random();
 
@@ -40,4 +40,28 @@ foreach (int item in arr)
     }
 };
 
-Console.WriteLine($"В массиве {count} четных элемента(ов)");
+Console.WriteLine($"В массиве {count} четных элемента(ов)");*/
+
+//Задача 3
+double[] arr = new double [10];
+Random rdm = new Random();
+
+for (int i = 0; i <= arr.Length - 1; i++ ){
+    arr[i] = rdm.NextDouble();
+}
+
+double numMin = arr[0];
+double numMax = arr[0];
+
+for (int i = 0; i <= arr.Length - 1; i++) {
+    if (arr[i] > numMax) {
+        numMax = arr[i];
+    }
+    if (arr[i] < numMin) {
+        numMin = arr[i];
+    }
+}
+
+double result = numMax - numMin;
+
+Console.WriteLine($" Разница между максимальным и минимальным элементом в массиве = {result}");
